@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url("../images/sun-pattern.png");
+    background-repeat: repeat;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
