@@ -6,11 +6,15 @@
     box-sizing: border-box;
 }
 
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
 .img-wrapper {
     border: solid blue 5px;
     padding: 5%;
-    width: 49.9%;
-    display: inline-block;
+    width: 50%;
 }
 
 .img-wrapper img {

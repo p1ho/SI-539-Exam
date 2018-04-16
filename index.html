@@ -4,12 +4,36 @@
     <title>SI-539 Exam 2 Part 2</title>
     <link rel="stylesheet" type="text/css" href="./css/exam_style.css" />
     <script>
+        window.onload = function (){
+            console.log('hi');
+            "use strict";
+            
+            const img = document.getElementById("img-hide");
+            const flex_container = document.querySelector(".flex-container");
+            const hide_button = document.getElementById("hide");
+            const show_button = document.getElementById("show");
+            
+        
+            function hide_image () {
+                img.style.display = "none";
+                flex_container.style.justifyContent = "center";
+            }
+            function show_image () {
+                img.style.display = "";
+                flex_container.style.justifyContent = "";
+            }
+            
+            hide_button.addEventListener("click", hide_image);
+            show_button.addEventListener("click", show_image);
+        }
     </script>
 </head>
 <body>
     <h1>Pokuan Ho</h1>
-    <div class="img-wrapper"><img src="./images/examPic.jpg" alt="Exam-Pic" /></div>
-    <div class="img-wrapper"><img src="./images/UMSI-logo.jpg" alt="UMSI-logo" /></div>
+    <div class="flex-container">
+        <div id='img-hide' class="img-wrapper"><img src="./images/examPic.jpg" alt="Exam-Pic" /></div>
+        <div class="img-wrapper"><img src="./images/UMSI-logo.jpg" alt="UMSI-logo" /></div>
+    </div>
     <button id="hide">Hide Image</button>
     <button id="show">Show Image</button>
 </body>
